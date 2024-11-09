@@ -1,103 +1,93 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Helvetica;
 }
 
-header{
-    width: 100;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(/IMAGES/1.jpg);
+header {
+    width: auto;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(/images/backg.jpg);
     background-position: center;
     background-size: cover;
     height: 93.5vh;
-
 }
 
-.navbar{
+.navbar {
     width: 100%;
     height: 75px;
-   color: #000;
+    color: #000;
     background-color: aliceblue;
 }
 
-.icon{
-    width: 200px;
-    float: left;
-    height: 70px;
-}
 
-.logo{
+.logo {
     color: #ff7200;
     font-size: 35px;
-    font-family:  Arial;
+    font-family: Arial;
     padding-left: 20px;
     float: left;
     padding-top: 10px;
 }
 
-.logo a img{
+.logo a img {
     width: 100px;
+    margin-left: 70px;
 }
 
-.menu{
+.menu {
     width: 400px;
     float: left;
     height: 70px;
+    margin-left: 70px;
 }
 
 
-ul{
+ul {
     float: left;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-ul li{
+ul li {
     list-style: none;
-    margin-left: 62px;
+    margin-left: 42px;
     margin-top: 27px;
     font-size: 14px;
 }
 
-ul li:last-child { margin-right: 0; }
+ul li:last-child {
+    margin-right: 0;
+}
 
-ul li a{
+ul li a {
     text-decoration: none;
     color: #555;
-    font-family: Helvetica;
+    /* font-family: Helvetica; */
     font-weight: bold;
     transition: 0.4s ease-in-out;
 }
 
-ul li :hover{
+ul li :hover {
     color: #ec0e0e;
 }
 
-.menu2{
+.menu2 {
     float: right;
-    margin-right: 30px;
+    margin-right: 100px;
 }
 
-.search{
-    width: 330px;
-    float: left;
-    margin-left: 270px;
-}
-
-
-input::placeholder {
+/* input::placeholder {
     color: #2d0583;
-    opacity: 1; 
-}
+    opacity: 1;
+} */
 
-
-
-.form{
+.form {
     width: auto;
     height: 380px;
     margin-right: 100px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8)50%, rgba(0, 0, 0, 0.8)50%);
     position: absolute;
     top: 100px;
     left: 910px;
@@ -106,7 +96,7 @@ input::placeholder {
     padding: 25px;
 }
 
-.form h2{
+.form h2 {
     width: 200px;
     font-family: sans-serif;
     text-align: center;
@@ -118,7 +108,7 @@ input::placeholder {
     padding: 8px;
 }
 
-.form input{
+.form input {
     width: 240px;
     height: 35px;
     background: transparent;
@@ -133,16 +123,12 @@ input::placeholder {
     font-family: sans-serif;
 }
 
-.form input:focus{
+.form input:focus {
     outline: none;
 }
 
-::placeholder{
-    color: white;
-    font-family: Arial;
-}
 
-.btnn{
+.btnn {
     width: 240px;
     height: 40px;
     background: #ff7200;
@@ -155,48 +141,191 @@ input::placeholder {
     transition: 0.4s ease;
 }
 
-.btnn:hover{
+.btnn:hover {
     background: white;
     color: #ff7200;
 }
 
-.btnn a{
+.btnn a {
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
-.form .link{
-    font-family: Arial, Helvetica, sans-serif;
+.form .link {
+    /* font-family: Arial, Helvetica, sans-serif; */
     font-size: 17px;
     padding-top: 20px;
     text-align: center;
 }
 
-.form .link a{
+.form .link a {
     text-decoration: none;
     color: #ff7200;
 }
 
-.liw{
-    padding-top: 15px;
-    padding-bottom: 10px;
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.Row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.row-2 {
+    justify-content: space-between;
+    margin: 50px auto 50px;
+
+}
+
+.row-2 a{
+    text-decoration: none;
+    color: #ec0e0e;
+    font-size: 20px;
+    /* font-family: Helvetica; */
+}
+
+.Row h2{
+    font-weight: bold;
+}
+
+.thecard {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 70vh;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.8s ease;
+}
+
+.thecard:hover {
+    transform: rotateY(180deg);
+}
+
+ /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ .thefront {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: #fff;
+    color: #000;
+}
+
+.thefront img {
+    width: 100%;
+    height: 70%;
+}
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+.theback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: #fafafa;
+    color: #333;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+ /*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+ .thefront h1,
+ .theback h1 {
+    padding-top: 40px;
+     font-family: 'zilla slab', sans-serif;
+     font-weight: bold;
+     font-size: 24px;
+     text-align: center;
+     color: #ec0e0e;
+ }
+
+ .theback h1 {
+     color: #000;
+ }
+
+ .thefront p {
+    font-family: 'zilla slab', sans-serif;
+    padding: 30px;
+    font-weight: normal;
+    font-size: 1.0em;
     text-align: center;
 }
 
-.icon a{
+.theback p {
+    font-family: Helvetica;
+    padding: 10px;
+    font-weight: normal;
+    font-size: 1.0em;
+    text-align: center;
+}
+
+.theback a {
     text-decoration: none;
-    color: white;
+    position: relative;
+    border-radius: 30px;
+    background: #fff;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.0em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
 }
 
-.icon ion-icon{
-    color: white;
-    font-size: 25px;
-    padding-left: 11px;
-    padding-top: 5px;
-    transition: 0.3s ease;
+
+.theback a:hover {
+    background: var(--clr);
+    color: var(--clr);
+    letter-spacing: 0.25em;
+    box-shadow: 0 0 35px var(--clr);
 }
 
-.icon ion-icon:hover{
-    color: #ff7200;
+.theback a::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #555;
+    border-radius: 30px;
 }
+
+.theback a span {
+    position: relative;
+    z-index: 1;
+
+}
+
+.cash {
+    color: #b82525;
+    font-weight: bold;
+
+}
+
+.time {
+    color: #ec0e0e;
+    font-weight: bold;
+}
+
+/* .row{
+    background: hsla(0, 5%, 66%, 0.847);
+} */
