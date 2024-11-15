@@ -421,6 +421,17 @@ ul li :hover {
   .image-card img {
       height: 250px;
   }
+  .thecard{
+    height: 75vh;
+  }
+  .row-2 {
+    margin: 25px -115px 25px;
+  }
+
+  .row-2 a {
+    margin-right: 20px;
+    /* font-family: Helvetica; */
+   }
 }
 
 @media (max-width: 480px) {
