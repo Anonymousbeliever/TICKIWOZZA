@@ -118,7 +118,7 @@ ul li :hover {
     position: relative;
     top: 0;
     left: 0;
-    width: 270px;
+    width: 20vw;
     height: 65vh;
     border-radius: 10px;
     transform-style: preserve-3d;
