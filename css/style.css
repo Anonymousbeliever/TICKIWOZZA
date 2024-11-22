@@ -164,7 +164,7 @@ ul li :hover {
 .date{
   margin-left: 15px;
   position: absolute;
-  
+  top: 350px;
   font-weight: 500;
   color: #b82525;
   font-size: 13px;
