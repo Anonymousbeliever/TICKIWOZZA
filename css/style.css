@@ -9,7 +9,7 @@
 
 header {
     width: auto;
-    background:  url(/images/hero.png);
+    /* background:  url(/images/hero.png); */
     background-position: center;
     background-size: cover;
     height: 80vh;
@@ -65,7 +65,6 @@ ul li:last-child {
 ul li a {
     text-decoration: none;
     color: #555;
-    /* font-family: Helvetica; */
     font-weight: bold;
     transition: 0.4s ease-in-out;
 }
@@ -79,12 +78,19 @@ ul li :hover {
     margin-right: 40px;
     margin-top: -7px;
 }
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #555;
+}
 
 .small-container {
     max-width: 1080px;
     margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+    /* padding-left: 25px;
+    padding-right: 25px; */
 }
 
 .Row {
@@ -96,9 +102,10 @@ ul li :hover {
 }
 
 .row-2 {
-    justify-content: space-between;
-    margin: 25px -115px 25px;
-
+  justify-content: space-between;
+  margin: 25px 0;
+  /* max-width: 1280px; Adjust this value based on your design */
+  padding: 0 20px; /* Add some padding for smaller screens */
 }
 
 .row-2 a {
@@ -106,7 +113,7 @@ ul li :hover {
     color: #ec0e0e;
     font-size: 18px;
     font-weight: 600;
-    margin-right: 20px;
+   
     /* font-family: Helvetica; */
 }
 
@@ -151,30 +158,35 @@ ul li :hover {
     width: 100%;
     height: 100%;
 }
-.data{
-  margin-top: 20px;
+.data {
+  margin-top: 15px;
   width: 100%;
   height: auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
-.name{
-  margin-left: 15px;
-  margin-top: 15px;
+
+.name {
   font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.date{
-  margin-left: 15px;
-  position: absolute;
-  top: 350px;
-  font-weight: 500;
+
+.date {
+  font-weight: 600;
   color: #b82525;
   font-size: 13px;
 }
-.location{
-  margin-left: 15px;
-  position: absolute;
-  top: 380px;
+
+.location {
   font-weight: 700;
   color: #031e5d;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
@@ -197,7 +209,7 @@ ul li :hover {
 /*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
 .thefront h1,
 .theback h1 {
-    padding-top: 55px;
+    padding-top: 20px;
     font-weight: bold;
     font-size: 24px;
     text-align: center;
@@ -383,74 +395,6 @@ ul li :hover {
   display: block;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .main-title {
-      font-size: 3rem;
-  }
-  .thecard{
-    height: 75vh;
-  }
-  .row-2 {
-    margin: 25px -115px 25px;
-  }
-
-  .row-2 a {
-    margin-right: 20px;
-    /* font-family: Helvetica; */
-   }
-}
-
-@media (max-width: 768px) {
-  .content-grid {
-      grid-template-columns: 1fr;
-  }
-
-  .image-grid {
-      margin-top: 40px;
-  }
-
-  .text-content {
-      padding-right: 0;
-  }
-
-  .main-title {
-      font-size: 2.5rem;
-  }
-
-  .image-card img {
-      height: 250px;
-  }
-  .thecard{
-    height: 75vh;
-  }
-  .row-2 {
-    margin: 25px -115px 25px;
-  }
-
-  .row-2 a {
-    margin-right: 20px;
-    /* font-family: Helvetica; */
-   }
-}
-
-@media (max-width: 480px) {
-  .about-section {
-      padding: 40px 0;
-  }
-
-  .main-title {
-      font-size: 2rem;
-  }
-
-  .image-grid {
-      grid-template-columns: 1fr;
-  }
-
-  .image-column.shifted {
-      margin-top: 0;
-  }
-}
 /*newletter*/
 
 .form {
@@ -617,16 +561,196 @@ footer {
    margin-top: -10px;
   }
 
+  /* Responsive Design */
+@media (min-width: 1430px) and (max-width: 1536px) {
+  .row-2 {
+    justify-content: space-between;
+    margin: 25px -130px;
+    max-width: 1280px; /* Adjust this value based on your design */
+    padding: 0 20px; /* Add some padding for smaller screens */
+}
+.thecard{
+  height: 75vh;
+}
+.thefront h1,
+.theback h1 {
+    padding-top: 55px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+
+}
+  }
+
+@media (min-width: 1280px) and (max-width: 1429px) {
+  .row-2 {
+    justify-content: space-between;
+    margin: 25px -60px;
+    max-width: 1280px; /* Adjust this value based on your design */
+    padding: 0 20px; /* Add some padding for smaller screens */
+}
+.thecard{
+  height: 70vh;
+}
+
+}
+
+
+@media (min-width: 1080px) and (max-width: 1279px) {
+  .row-2 {
+    justify-content: space-between;
+    margin: 25px 45px;
+    max-width: 1280px; /* Adjust this value based on your design */
+    padding: 0 20px; /* Add some padding for smaller screens */
+}
+.thecard{
+  height: 65vh;
+}
+.data{
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  font-size: 75%;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 1079px) {
+  
+.content-grid {
+    grid-template-columns: 1fr;
+}
+
+.image-grid {
+    margin-top: 40px;
+}
+
+.text-content {
+    padding-right: 0;
+}
+
+.main-title {
+    font-size: 2.5rem;
+}
+
+.image-card img {
+    height: 250px;
+}
+
+.row-2 {
+  justify-content: space-between;
+  margin: 25px 45px;
+  max-width: 1280px; /* Adjust this value based on your design */
+  padding: 0 20px; /* Add some padding for smaller screens */
+}
+
+.thecard {
+    height: 45vh;
+    transition: none;
+    transform: none;
+    backface-visibility: hidden;
+}
+.theback{
+  display: none;
+}
+
+.data{
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  font-size: 30%;
+}
+.name {
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 180%;
+}
+
+.date {
+  font-weight: 600;
+  color: #b82525;
+  font-size: 13px;
+  margin-top: -5px;
+}
+
+.location {
+  font-weight: 700;
+  color: #031e5d;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 180%;
+  margin-top: -6px;
+}
+
+.thefront h1,
+.theback h1 {
+    padding-top: 25px;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+   
+}
+
+
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+.about-section {
+    padding: 40px 0;
+}
+
+.main-title {
+    font-size: 2rem;
+}
+
+.image-grid {
+    grid-template-columns: 1fr;
+}
+
+.image-column.shifted {
+    margin-top: 0;
+}
+.row-2 a{
+  visibility: hidden;
+}
+
+.menu, .menu2 {
+  display: none;
+  flex-direction: column;
+  background-color: aliceblue;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  width: 100%;
+}
+
+.menu.active, .menu2.active {
+  display: flex;
+}
+
+.hamburger {
+  display: block;
+}
+}
 
 
 @media screen and (max-width:990px) {
     footer .container {
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 40px;
+        grid-gap: 80px;
     }
 
     footer {
-        padding: 50px 40px;
+        padding: 10px 0;
     }
 }
 
