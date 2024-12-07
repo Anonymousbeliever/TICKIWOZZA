@@ -9,10 +9,23 @@
 
 header {
     width: auto;
-    /* background:  url(/images/hero.png); */
+    background:  url(/images/hero.png); 
     background-position: center;
     background-size: cover;
     height: 80vh;
+}
+
+.typing-text{
+  backdrop-filter: blur(10px);
+  color: white;
+  -webkit-text-stroke: 0.5px  black;  
+  padding: 5px;
+  border-radius: 20px;
+  font-size: 40px;
+  font-weight: 900;
+  position: absolute;
+  top: 40%;
+  left: 60%;
 }
 
 .navbar {
