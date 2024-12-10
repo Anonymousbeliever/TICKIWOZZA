@@ -9,7 +9,7 @@
 
 header {
     width: auto;
-    background:  url(/images/hero.png); 
+    background:  url(../images/hero.png); 
     background-position: center;
     background-size: cover;
     height: 80vh;
