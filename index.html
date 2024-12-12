@@ -51,7 +51,36 @@
         <div class="typing-container">
             <p class="typing-text">Get the Ticket for  your <br> Favorite Event and <br> Book Hotels with ease!</p>
         </div>
-        
+        <div class="containerr">
+            <div class="nav">
+              <button id="eventButton" class="active">Events</button>
+              <button id="hotelButton">Hotels</button>
+            </div>
+            <div class="form-container">
+              <div id="eventForm" class="active">
+                <div class="input-container">
+                    <i class="fa fa-ticket" aria-hidden="true"></i> <!-- Ticket Icon -->
+                  <input type="text" id="eventName" name="eventName" placeholder="Enter event name..">
+                </div>
+                <div class="input-container">
+                  <i class="fa fa-map-marker-alt location-icon"></i> <!-- Location Icon -->
+                  <input type="text" id="eventCity" name="eventCity" placeholder="City">
+                </div>
+                <button type="button" onclick="searchEvents()">Find Events</button>
+              </div>
+              <div id="hotelForm">
+                <div class="input-container">
+                  <i class="fa fa-hotel event-icon"></i> <!-- Hotel Icon -->
+                  <input type="text" id="hotelName" name="hotelName" placeholder="Enter hotel name..">
+                </div>
+                <div class="input-container">
+                  <i class="fa fa-map-marker-alt location-icon"></i> <!-- Location Icon -->
+                  <input type="text" id="hotelCity" name="hotelCity" placeholder="City">
+                </div>
+                <button type="button" onclick="searchHotels()">Find Hotels</button>
+              </div>
+            </div>
+          </div>
     
     </header>
 
@@ -383,6 +412,48 @@
               document.querySelector('.menu').classList.toggle('active');
               document.querySelector('.menu2').classList.toggle('active');
             }
+
+
+   const eventButton = document.getElementById('eventButton');
+   const hotelButton = document.getElementById('hotelButton');
+   const eventForm = document.getElementById('eventForm');
+   const hotelForm = document.getElementById('hotelForm');
+
+   eventButton.addEventListener('click', () => {
+     smoothTransition(hotelForm, eventForm);
+     eventButton.classList.add('active');
+     hotelButton.classList.remove('active');
+   });
+
+   hotelButton.addEventListener('click', () => {
+     smoothTransition(eventForm, hotelForm);
+     hotelButton.classList.add('active');
+     eventButton.classList.remove('active');
+   });
+
+   function smoothTransition(fromElement, toElement) {
+     fromElement.style.opacity = '0';
+     setTimeout(() => {
+       fromElement.style.display = 'none';
+       toElement.style.display = 'block';
+       setTimeout(() => {
+         toElement.style.opacity = '1';
+       }, 20);
+     }, 700);
+   }
+
+   function searchEvents() {
+     const eventName = document.getElementById("eventName").value;
+     const city = document.getElementById("eventCity").value;
+     console.log("Searching for events: Event Name - ", eventName, ", City - ", city);
+   }
+
+   function searchHotels() {
+     const hotelName = document.getElementById("hotelName").value;
+     const city = document.getElementById("hotelCity").value;
+     console.log("Searching for hotels: Hotel Name - ", hotelName, ", City - ", city);
+   }
+
           </script>
 
 
